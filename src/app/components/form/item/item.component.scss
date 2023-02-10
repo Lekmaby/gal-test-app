@@ -1,0 +1,11 @@
+@import '../../../../variables';
+
+.item{
+  border: 1px solid $lineColor;
+  margin-top: 5px;
+  padding: 5px;
+
+  .number{
+    margin-right: 8px;
+  }
+}

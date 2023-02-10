@@ -1,0 +1,5 @@
+<div class="item" *ngIf="item?.status !== 'planned'">
+  <span class="number">{{item.order}}.</span>
+  <app-loader [loading]="true" *ngIf="item?.status === 'pending'"></app-loader>
+  <span *ngIf="item?.status !== 'pending'">{{item.result | json}}</span>
+</div>

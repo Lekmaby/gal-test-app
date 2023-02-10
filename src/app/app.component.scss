@@ -1,0 +1,55 @@
+@import '../variables';
+
+.app {
+  margin: 24px;
+
+  .menu {
+    margin: 16px 0 ;
+
+    a {
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.5;
+      color: $accentColor;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid $accentColor;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      border-radius: 0.25rem;
+      margin-right: 16px;
+
+      &:focus,
+      &:hover {
+        color: white;
+        background-color: $accentColor;
+      }
+
+      &:active {
+        color: white;
+        background-color: darken($accentColor, 10%);
+      }
+
+      &:disabled {
+        color: $lineColor;
+        border-color: $lineColor;
+        cursor: not-allowed;
+        pointer-events:none;
+      }
+    }
+
+    .active-link{
+      color: white;
+      background-color: $accentColor;
+    }
+  }
+
+  .content{
+    margin-top: 16px;
+    border: 1px solid $lineColor;
+    padding: 16px;
+  }
+}

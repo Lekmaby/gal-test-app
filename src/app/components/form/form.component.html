@@ -1,0 +1,14 @@
+<app-loader [loading]="loading" *ngIf="loading"></app-loader>
+
+<div *ngIf="params" class="params">
+  <div><b>Параметры</b></div>
+  <div *ngFor="let param of params | keyvalue">
+    <b>{{param.key}}: </b> <span>{{param.value}}</span>
+  </div>
+</div>
+
+<div *ngIf="loadingData">
+  <ng-container *ngFor="let result of results | keyvalue: keyAscOrder">
+    <app-item [item]="result.value"></app-item>
+  </ng-container>
+</div>
